@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dingmouren.annularmenuview.MainActivity">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+    <include layout="@layout/right_bottom_menu"
+        android:id="@+id/menu1"
+        />
+    <include layout="@layout/right_top_menu"
+        android:id="@+id/menu2"
+        />
+    <include layout="@layout/left_bottom_menu"
+        android:id="@+id/menu3"
+        />
+    <include layout="@layout/left_top_menu"
+        android:id="@+id/menu4"
+        />
+
+</RelativeLayout>

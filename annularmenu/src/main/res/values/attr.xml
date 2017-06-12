@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--环形菜单-->
+    <declare-styleable name="AnnularMenu">
+        <attr name="position"/>
+        <attr name="radius"/>
+    </declare-styleable>
+    <attr name="position">
+        <enum name="left_top" value="0"/>
+        <enum name="left_bottom" value="1"/>
+        <enum name="right_top" value="2"/>
+        <enum name="right_bottom" value="3"/>
+    </attr>
+    <attr name="radius" format="dimension"/>
+    <!--带阴影效果的圆形ImageView-->
+    <declare-styleable name="ShadowImageView">
+        <attr name="shadowOffsetX" format="dimension"/>
+        <attr name="shadowOffsetY" format="dimension"/>
+        <attr name="shadowRadius" format="dimension"/>
+        <attr name="src" format="reference"/>
+    </declare-styleable>
+</resources>

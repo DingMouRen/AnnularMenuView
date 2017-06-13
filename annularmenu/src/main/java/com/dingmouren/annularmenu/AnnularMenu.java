@@ -76,6 +76,7 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
                 break;
         }
         mRadius = (int) a.getDimension(R.styleable.AnnularMenu_radius, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics()));
+        mToggleDuration = a.getInt(R.styleable.AnnularMenu_toggleDuration, DEFAULT_TOGGLE_DURATION);
         a.recycle();//释放资源
     }
 
@@ -147,6 +148,7 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
         }
         mCButton.layout(left, top, left + width, top + height);
     }
+
     @Override
     public void onClick(View v) {
         rotateCButton(v, 0f, 360f, 300);
@@ -177,12 +179,12 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
             //to open
             if (mCurrentStatus == Status.CLOSE) {
                 alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
-                tranAnim = new TranslateAnimation(xflag * (childLeft - child.getMeasuredWidth()/2 ), 0, yflag * (childTop - child.getMeasuredWidth()/2 ),  0);
+                tranAnim = new TranslateAnimation(xflag * (childLeft - child.getMeasuredWidth() / 2), 0, yflag * (childTop - child.getMeasuredWidth() / 2), 0);
                 child.setClickable(true);
                 child.setFocusable(true);
             } else {        //to close
                 alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
-                tranAnim = new TranslateAnimation( 0, xflag * (childLeft - child.getMeasuredWidth()/2 ), 0, yflag * (childTop - child.getMeasuredWidth()/2 ));
+                tranAnim = new TranslateAnimation(0, xflag * (childLeft - child.getMeasuredWidth() / 2), 0, yflag * (childTop - child.getMeasuredWidth() / 2));
                 child.setClickable(false);
                 child.setFocusable(false);
             }
@@ -253,9 +255,14 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
         return mCurrentStatus == Status.OPEN;
     }
 
-    public void toggle(){
+    public void toggle() {
         toggleMenu(mToggleDuration);
     }
+
+    public void setToggleDuration(int duration) {
+        this.mToggleDuration = duration;
+    }
+
 
     /*
      * item变小的动画

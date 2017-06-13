@@ -4,6 +4,7 @@
     <declare-styleable name="AnnularMenu">
         <attr name="position"/>
         <attr name="radius"/>
+        <attr name="toggleDuration" format="integer"/>
     </declare-styleable>
     <attr name="position">
         <enum name="left_top" value="0"/>

@@ -27,8 +27,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
 }
-def siteUrl = 'https://github.com/DingMouRen/PaletteImageView'                        // #CONFIG# // project homepage
-def gitUrl = 'https://github.com/DingMouRen/PaletteImageView.git'                     // #CONFIG# // project git
+def siteUrl = 'https://github.com/DingMouRen/AnnularMenuView'                        // #CONFIG# // project homepage
+def gitUrl = 'https://github.com/DingMouRen/AnnularMenuView.git'                     // #CONFIG# // project git
 group = "com.dingmouren.annularmenu"
 version = "1.0.1"
 

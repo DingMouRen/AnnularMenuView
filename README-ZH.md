@@ -75,6 +75,7 @@ AnnularMenu | 描述
 public boolean isOpen()| 判断菜单当前是打开还是关闭状态
 public void toggle()|根据菜单当前状态切换打开或者关闭菜单
 public void setOnMenuItemClickListener(OnMenuItemClickListener onMenuItemClickListener)|菜单item项的点击监听
+public void setMenuButtonClickable(boolean clickable)|设置菜单按钮是否可点击
 
 欢迎大家提建议
 

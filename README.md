@@ -78,7 +78,7 @@ AnnularMenu | Description
 public boolean isOpen()| Determines whether the menu is open or closed at the moment
 public void toggle()|Switch menu
 public void setOnMenuItemClickListener(OnMenuItemClickListener onMenuItemClickListener)|Listen for the click of the menu item item
-
+public void setMenuButtonClickable(boolean clickable)|Change the menu button clickable state
 #### Welcome to make suggestions
 
 ## License

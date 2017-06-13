@@ -194,7 +194,6 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
             tranAnim.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
-
                 }
 
                 @Override
@@ -257,6 +256,11 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
 
     public void toggle() {
         toggleMenu(mToggleDuration);
+    }
+
+    public void setMenuButtonClickable(boolean clickable){
+        View menuView = getChildAt(0);
+        menuView.setClickable(clickable);
     }
 
 

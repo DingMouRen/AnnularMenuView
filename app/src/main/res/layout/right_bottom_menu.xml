@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:position="right_bottom"
     app:radius="120dp"
-
+    app:toggleDuration="800"
     >
 
     <com.dingmouren.annularmenu.ShadowImageView

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         menu2 = (AnnularMenu) findViewById(R.id.menu2);
         menu3 = (AnnularMenu) findViewById(R.id.menu3);
         menu4 = (AnnularMenu) findViewById(R.id.menu4);
-        menu1.setVisibility(View.INVISIBLE);
+//        menu1.setVisibility(View.INVISIBLE);
         menu2.setVisibility(View.INVISIBLE);
         menu3.setVisibility(View.INVISIBLE);
-//        menu4.setVisibility(View.INVISIBLE);
+        menu4.setVisibility(View.INVISIBLE);
         menu1.setOnMenuItemClickListener(new AnnularMenu.OnMenuItemClickListener() {
             @Override
             public void onClick(View view, int position) {
@@ -44,6 +45,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new MyAdapter());
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE){
+                    menu1.setMenuButtonClickable(true);
+                }else {
+                    menu1.setMenuButtonClickable(false);
+                }
+                super.onScrollStateChanged(recyclerView, newState);
+
+            }
+
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);

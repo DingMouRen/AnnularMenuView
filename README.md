@@ -10,7 +10,7 @@
 ##  Usage
 In the module build.gradle
 ```
-com.dingmouren.annularmenu:annularmenu:1.0.1
+com.dingmouren.annularmenu:annularmenu:1.0.2
 ```
 
 ## Example Usage

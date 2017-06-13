@@ -7,7 +7,7 @@
 ##  引入方式
 在module的build.gradle中
 ```
-com.dingmouren.annularmenu:annularmenu:1.0.1
+com.dingmouren.annularmenu:annularmenu:1.0.2
 ```
 
 ## 怎么使用

@@ -30,7 +30,7 @@ dependencies {
 def siteUrl = 'https://github.com/DingMouRen/AnnularMenuView'                        // #CONFIG# // project homepage
 def gitUrl = 'https://github.com/DingMouRen/AnnularMenuView.git'                     // #CONFIG# // project git
 group = "com.dingmouren.annularmenu"
-version = "1.0.1"
+version = "1.0.2"
 
 install {
     repositories.mavenInstaller {

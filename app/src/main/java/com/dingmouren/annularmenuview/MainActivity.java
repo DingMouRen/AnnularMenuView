@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
         menu2 = (AnnularMenu) findViewById(R.id.menu2);
         menu3 = (AnnularMenu) findViewById(R.id.menu3);
         menu4 = (AnnularMenu) findViewById(R.id.menu4);
+        menu1.setVisibility(View.INVISIBLE);
         menu2.setVisibility(View.INVISIBLE);
         menu3.setVisibility(View.INVISIBLE);
-        menu4.setVisibility(View.INVISIBLE);
+//        menu4.setVisibility(View.INVISIBLE);
         menu1.setOnMenuItemClickListener(new AnnularMenu.OnMenuItemClickListener() {
             @Override
             public void onClick(View view, int position) {

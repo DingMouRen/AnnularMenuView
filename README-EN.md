@@ -4,9 +4,6 @@
 　　　　　　　　　　　　　![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo3.gif)<br>
 ![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo1.gif)　　　
 ![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo2.gif)<br>
-
-[English README](https://github.com/DingMouRen/AnnularMenuView/raw/master/README-EN.md)　　
-[中文文档](https://github.com/DingMouRen/AnnularMenuView/raw/master/README-ZH.md)
 ##  Usage
 In the module build.gradle
 ```

@@ -1,45 +1,42 @@
 
 ![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/title.png)<br>
-# AnnularMenu is based on Material Design design of the ring menu control. For specific use, please read down.
+# AnnularMenu是基于Material Design设计的环形菜单控件。具体使用请往下阅读。
 　　　　　　　　　　　　　![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo3.gif)<br>
 ![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo1.gif)　　　
 ![image](https://github.com/DingMouRen/AnnularMenuView/raw/master/screenshot/demo2.gif)<br>
-
-[English README](https://github.com/DingMouRen/AnnularMenuView/raw/master/README-EN.md)　　
-[中文文档](https://github.com/DingMouRen/AnnularMenuView/raw/master/README-ZH.md)
-##  Usage
-In the module build.gradle
+##  引入方式
+在module的build.gradle中
 ```
 com.dingmouren.annularmenu:annularmenu:1.0.1
 ```
 
-## Example Usage
-#### 1.Layout XML
+## 怎么使用
+1.布局文件
 ```
 <com.dingmouren.annularmenu.AnnularMenu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:position="left_bottom" //The menu's location
-    app:radius="120dp"         //The radius of the menu
-    app:toggleDuration="500"   //Open / close the menu duration of the animation
+    app:position="left_bottom" //菜单的位置
+    app:radius="120dp"         //菜单的半径
+    app:toggleDuration="500"   //菜单打开或者关闭的动画持续时间
     >
 
     <com.dingmouren.annularmenu.ShadowImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        app:src="@mipmap/menu" //The first is the button that opens or closes the menu
-        app:shadowOffsetX="2dp" //The shadow of the offset in the direction of X
-        app:shadowOffsetY="2dp" //The offset of the shadow in the Y direction
-        app:shadowRadius="5dp"  //Shadow radius
+        app:src="@mipmap/menu" //第一个是打开或者关闭菜单的按钮
+        app:shadowOffsetX="2dp" //阴影在x方向的偏移量
+        app:shadowOffsetY="2dp" //阴影在y方向的偏移量
+        app:shadowRadius="5dp"  //阴影的半径
         />
     <com.dingmouren.annularmenu.ShadowImageView
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_centerHorizontal="true"
-        app:src="@mipmap/item1" //The following are the item menu
+        app:src="@mipmap/item1" //下面的都是菜单的item项
         app:shadowOffsetX="2dp"
         app:shadowOffsetY="2dp"
         app:shadowRadius="2dp"
@@ -48,7 +45,7 @@ com.dingmouren.annularmenu:annularmenu:1.0.1
  </com.dingmouren.annularmenu.AnnularMenu>
 ```
 
-#### 2.Java code
+2.代码中的菜单item项点击的监听
 ```
 menu1.setOnMenuItemClickListener(new AnnularMenu.OnMenuItemClickListener() {
             @Override
@@ -58,28 +55,28 @@ menu1.setOnMenuItemClickListener(new AnnularMenu.OnMenuItemClickListener() {
         });
 ```
 
-## Attribute
-AnnularMenu | Description
+## 属性
+AnnularMenu | 描述
 -------|---
-position|The menu's location, values are: left_top, left_bottom, right_top, right_bottom, and the default is right_bottom
-radius|The radius of the menu, when the number of item items in the menu increases, you need to set the radius to adjust the item spacing
-toggleDuration|Open / close the menu duration of the animation, the default is 500 milliseconds
+position|菜单的位置，取值有:left_top left_bottom right_top right_bottom,默认是right_bottom
+radius|菜单的半径，在菜单的item项数目增多的时候需要设置radius调整item的间距
+toggleDuration|菜单打开/关闭动画的持续时间，默认是500毫秒
 
-ShadowImageView | Description
+ShadowImageView | 描述
 -------|---
-shadowOffsetX|The shadow of the offset in the direction of X
-shadowOffsetY|The offset of the shadow in the Y direction
-shadowRadius|Shadow radius
-src|picture
+shadowOffsetX|阴影在x方向上的偏移量
+shadowOffsetY|阴影在y方向上的偏移量
+shadowRadius|阴影半径
+src|指定图片
 
-## AnnularMenu’Method
-AnnularMenu | Description
+## AnnularMenu公开的方法
+AnnularMenu | 描述
 -------|---
-public boolean isOpen()| Determines whether the menu is open or closed at the moment
-public void toggle()|Switch menu
-public void setOnMenuItemClickListener(OnMenuItemClickListener onMenuItemClickListener)|Listen for the click of the menu item item
+public boolean isOpen()| 判断菜单当前是打开还是关闭状态
+public void toggle()|根据菜单当前状态切换打开或者关闭菜单
+public void setOnMenuItemClickListener(OnMenuItemClickListener onMenuItemClickListener)|菜单item项的点击监听
 
-#### Welcome to make suggestions
+欢迎大家提建议
 
 ## License
 ```

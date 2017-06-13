@@ -259,9 +259,7 @@ public class AnnularMenu extends ViewGroup implements View.OnClickListener {
         toggleMenu(mToggleDuration);
     }
 
-    public void setToggleDuration(int duration) {
-        this.mToggleDuration = duration;
-    }
+
 
 
     /*
